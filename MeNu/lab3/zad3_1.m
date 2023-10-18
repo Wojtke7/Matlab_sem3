@@ -42,3 +42,20 @@ x=inv(C)*b,
 % 11. Wielomian charakterystyczny macierzy kwadratowej 
 poly(A),
 
+% 12. Wyznacznik macierzy 
+det(C),
+
+% 13. Rząd macierzy
+rank(A),
+
+% 14.Forma kwadratowa
+(x.')*C*x,
+
+% 15. Dekompozycja EVD macierzy
+S=[2,1;1,2],
+[V,D]=eig(S),
+S=V*D*V',
+
+% 16. Dekompozycja SVD macierzy
+[U,D,V]=svd(C),
+C=U*D*V'
