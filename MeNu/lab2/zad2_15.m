@@ -2,7 +2,7 @@ frequency = 20;
 probe_frequency = 192000; 
 initial_angle = 0;
 iteration_count=50000; 
-omega_zero = 2*pi*frequency/probe_frequency;
+omega_zero = 2*pi*frequency/probe_frequency,
 a = 2*cos(omega_zero);
 
 y=[sin(initial_angle+omega_zero),sin(initial_angle+2*omega_zero)];
@@ -16,6 +16,6 @@ for i=3:iteration_count
 end
 
 plot(x,y);
-title("Wykres wynikowy");
+title("Wykres sinusa");
 xlabel("radiany");
 ylabel("sin(x)");
