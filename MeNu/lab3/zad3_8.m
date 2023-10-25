@@ -23,4 +23,4 @@ figure; plot(overlaid_spectrum); title('Widmo częstotliwościowe nałożonych �
 back_canary_fs = overlaid_spectrum - elephant_freq_spectrum;
 % zmieniam widmo spowrotem na sciezke dzwiekową
 back_canary    = A^-1 * back_canary_fs;
-figure; plot(back_canary); title('back_canary');
+figure; plot(back_canary); title('Odzyskana ścieżki dźwiękowej kanarka');
