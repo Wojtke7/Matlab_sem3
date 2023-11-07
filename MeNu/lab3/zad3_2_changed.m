@@ -1,6 +1,6 @@
 % matrix_obwod_dc.m
 clear all; close all;
-R1 = 10; R2 = 20; R3 = 30; R0 = 40;
+R1 = 20; R2 = 40; R3 = 60; R0 = 80;
 
 E1 = 1; E2 = 2; E3 = 3;
 
@@ -10,7 +10,7 @@ A = [ R1+R2, -R2, 0; ...
 
 b = [ E1-E2; ...
 E2; ...
-E3 ],
+-E3 ],
 % x = ?
 x1 = inv(A)*b; % inv(A) = A^(-1)
 x2 = pinv(A)*b; % pinv(A) = (A^T * A)^(-1) * A^T
