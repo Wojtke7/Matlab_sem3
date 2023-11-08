@@ -17,11 +17,11 @@ public class FloatArithmeticMean {
 			for (int i = 0; i < liczbaDanych; i++) {
 				float num = Float.parseFloat(args[i]);
 				suma += num;
-		        System.out.printf("%.3f%n", num);
+		        System.out.printf("%8s%.3f%n","", num);
 			}
 			
-			System.out.println("-----------------------");
-			System.out.format("%.3f%n", suma);
+			System.out.println("--------------");
+			System.out.format("\t%.3f%n", suma);
 			
 			float Mean = suma / liczbaDanych;
 			
