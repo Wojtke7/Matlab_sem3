@@ -1,12 +1,12 @@
-A = [10, -7, 0;
-     -3,  2, 6;
-      5, -1, 5];
-[L, U] = lu(A), %Problem z algorytmem ?
+A = [1, 1, 1;
+     1,  2, 3;
+      1, 3, 4];
+%[L, U] = lu(A), %Problem z funkcją ?
+[L, U] = myLU(A),
 
-b = [5;11;8];
+b = [3;0;-2];
 y(1)=b(1);
 [N,N] = size(A);
-N,
 
 for i=2:N
     y(i,1) = b(i)- L(i,1:i-1)*y(1:i-1,1);
