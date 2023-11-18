@@ -11,6 +11,7 @@ public class LineCounter {
 			while (reader.readLine()!= null ) {
 				counter ++;
 			}
+			
 			System.out.println("Liczba wierszy w pliku " + args[0] + " wynosi: " + counter);
 			reader.close();
 		}
