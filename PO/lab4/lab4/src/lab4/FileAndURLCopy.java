@@ -22,9 +22,14 @@ public class FileAndURLCopy {
 	private static void copyUrlToFile(String urlString, Path destination) throws IOException {
     	try (InputStream in = new URL(urlString).openStream()) {
     		String fileName = getFileName(urlString);
-            Path destinationPath = destination.resolve(fileName);\
+    		try {
+            Path destinationPath = destination.resolve(fileName);
             // dodać warunek sprawdzający czy drugi argument to plik czy katalog elo
             Files.copy(in, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+    		}
+            catch (NoSuchFileException e) {
+            	Files.copy(in, destination, StandardCopyOption.REPLACE_EXISTING);
+            }
         }
     }
 
@@ -52,6 +57,11 @@ public class FileAndURLCopy {
             	copyUrlToFile(sourcePath, Paths.get(destinationPath));                               
                 System.out.println("URL skopiowany pomyślnie.");
             } else {
+            	if (args.length < 2) {
+            		System.out.println("Brak lub za mało argumentów programu do skopiowania pliku");
+                    System.out.println("Użycie: java FileCopy.java source_file target");
+                    return;
+            	}
                 source = Paths.get(sourcePath);
                 Path destination = Paths.get(destinationPath);
 
@@ -72,11 +82,11 @@ public class FileAndURLCopy {
         } 
         catch (FileSystemException h) {
             System.out.println("Nie można nadpisać pliku " + args[1]);
- } 
-    catch (MalformedURLException i) {
+        } 
+        catch (MalformedURLException i) {
             System.out.println("Podany URL ma złą formę");
         } catch (UnknownHostException k) {
-        	System.out.println("Podany URL jest niepraidłowy");
+        	System.out.println("Brak połączenia sieciowego bądz niepoprawny adres.");
         }catch (IOException j) {
           System.out.println("Błąd podczas kopiowania pliku");
         }
