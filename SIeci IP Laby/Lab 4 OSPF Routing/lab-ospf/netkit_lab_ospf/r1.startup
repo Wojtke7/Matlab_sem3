@@ -1,0 +1,5 @@
+ifconfig eth1 137.0.0.1 netmask 255.255.255.0 up
+ifconfig eth0 137.0.1.1 netmask 255.255.255.0 up
+ifconfig eth2 137.0.4.1 netmask 255.255.255.0 up
+/etc/init.d/quagga start
+chmod a+rw /etc/quagga
