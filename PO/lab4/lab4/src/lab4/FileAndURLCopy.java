@@ -24,9 +24,10 @@ public class FileAndURLCopy {
     		String fileName = getFileName(urlString);
     		try {
             Path destinationPath = destination.resolve(fileName);
-            // dodać warunek sprawdzający czy drugi argument to plik czy katalog elo
+            // KATALOG
             Files.copy(in, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     		}
+    		// PLIK
             catch (NoSuchFileException e) {
             	Files.copy(in, destination, StandardCopyOption.REPLACE_EXISTING);
             }
