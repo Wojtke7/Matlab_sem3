@@ -28,7 +28,7 @@ imshow(image);
 function x = elipsa(S,r,N)
 [V,D] = eig(S),                    % EVD
 V = V*sqrt(r*D),                   % macierz transformacji y (okrag) --> x (elipsa)
-alfa = linspace(0,2*pi,N);         % katy okregu
+alfa = linspace(0,2*pi,N); % katy okregu
 x = V * [ cos(alfa); sin(alfa)];   % transformacja punktow okregu na elipse
 end
 

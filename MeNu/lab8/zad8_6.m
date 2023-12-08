@@ -3,7 +3,7 @@ clear all;
 close all; 
 clc;
 
-N = 2000;      % liczba analizowanych probek danych, przykładowe 5000
+N = 5000;      % liczba analizowanych probek danych, przykładowe 5000
 fpr = 10000; % liczba probek danych na sekunde, okres
 dt = 1/fpr;    % okres probkowania
 f = [ 1000  2000  3000 4000];  % liczba powtorzen na sekunde skladowych sinusoidalnych
@@ -33,15 +33,15 @@ err_fest2 = max(abs(fest2 - f.')),
 err_dest2 = max(abs(dest2 - d.')),
 
 if err_fest1 > err_fest2
-   disp("flp wygrywa")
+   disp("flpvsd to lepsza funkcja do fest")
 else
-   disp("flpsvd wygrywa")
+   disp("flp to lepsza funkcja do fest")
 end
 
 if err_dest1 > err_dest2
-   disp("flp wygrywa")
+   disp("flpvsd to lepsza funkcja do dest")
 else
-   disp("flpsvd wygrywa")
+   disp("flp to lepsza funkcja do dest")
 end
 
 %flp
@@ -49,10 +49,8 @@ end
 % wyższe wartości składowych dają mniejszy błąd
 % Im więcej składowych tym mniejszy błąd
 % W miarę zwiększania wartości SNR, błąd się zmniejsza
-%flpsvd
-% im więcej próbek tym mniejszy błąd
-% wyższe wartości składowych dają mniejszy błąd
-% Im więcej składowych tym mniejszy błąd
-% W miarę zwiększania wartości SNR, błąd się zmniejsza
 
-%flp to lepszy wybór (dużo szybszy)
+% tak samo dla flpsvd
+
+
+%flpvsd to lepszy wybór (mniejszy błąd przybliżenia ale wolniejszy)

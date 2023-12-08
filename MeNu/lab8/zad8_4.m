@@ -13,20 +13,22 @@ pause;
 A = [4 5 6 7;
        5 6 7 8;
        6 7 8 9;
-       7 8 9 10;];
+       7 8 9 4;];
 
 [R, D] = solve(A)
+[V,F] = eig(A),
 
 function [R, D] = solve(A)
    D = A; 
    [N, N] = size(D);
    R = eye(N);
+   
    while (true) %pętla do momentu gdy macierz D ma element do wyzerowania
        D_abs = abs(D - tril(D)); % utworzenie macierzy zawierającej tylko wartości nad główną przekątną 
        [v, x, y] = mmax(D_abs); % znalezienie maksymalnej wartości macierzy oraz jej indeksów
        assert(D_abs(y, x) == v); %sprawdzenie czy przypadkiem x nie równe -1 
 
-    % jeśli w macierzy D zostały jeszcze wartości nie wyzerowane
+        % jeśli w macierzy D zostały jeszcze wartości nie wyzerowane
        if (abs(v) > 0.000001)
            Ri = rotation_matrix( y, x, D);
            D = Ri.' * D * Ri;
