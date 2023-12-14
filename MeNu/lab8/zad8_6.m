@@ -3,12 +3,12 @@ clear all;
 close all; 
 clc;
 
-N = 5000;      % liczba analizowanych probek danych, przykładowe 5000
-fpr = 10000; % liczba probek danych na sekunde, okres
+N = 1000;      % liczba analizowanych probek danych, przykładowe 5000
+fpr = 10000; % liczba probek danych na sekunde
 dt = 1/fpr;    % okres probkowania
 f = [ 1000  2000  3000 4000];  % liczba powtorzen na sekunde skladowych sinusoidalnych
-d = [ 1     2    3 4];  % tlumienie kolejnych skladowych
-A = [ 1     0.5   0.25 0.5];  % amplituda kolejnych skladowych
+d = [ 1     2    3 4 ];  % tlumienie kolejnych skladowych
+A = [ 5     5.5   5.25 5.5];  % amplituda kolejnych skladowych
 K = length(f);              % liczba skladowych sygnalu
 x = zeros(1,N);             % inicjalizacja danych
 
@@ -47,10 +47,15 @@ end
 %flp
 % im więcej próbek tym mniejszy błąd
 % wyższe wartości składowych dają mniejszy błąd
-% Im więcej składowych tym mniejszy błąd
+% Im więcej składowych tym większy błąd
 % W miarę zwiększania wartości SNR, błąd się zmniejsza
-
 % tak samo dla flpsvd
 
 
-%flpvsd to lepszy wybór (mniejszy błąd przybliżenia ale wolniejszy)
+%WNIOSKI
+%flpvsd to lepszy wybór ale wolniejszy dla większej ilości próbek
+
+%Gdy zwiększymy SNR flp spisuje się lepiej
+
+%Gdy zwiększamy liczbę składowych wtedy flp to lepsza funkcja do
+%estymowania macierzy fest natomiast flpvsd do estymowania macierzy dest

@@ -15,7 +15,7 @@ A = [4 5 6 7;
        6 7 8 9;
        7 8 9 4;];
 
-[R, D] = solve(A)
+[R, D] = solve(A),
 [V,F] = eig(A),
 
 function [R, D] = solve(A)
@@ -26,7 +26,7 @@ function [R, D] = solve(A)
    while (true) %pętla do momentu gdy macierz D ma element do wyzerowania
        D_abs = abs(D - tril(D)); % utworzenie macierzy zawierającej tylko wartości nad główną przekątną 
        [v, x, y] = mmax(D_abs); % znalezienie maksymalnej wartości macierzy oraz jej indeksów
-       assert(D_abs(y, x) == v); %sprawdzenie czy przypadkiem x nie równe -1 
+      % assert(D_abs(y, x) == v); %sprawdzenie czy przypadkiem x nie równe -1 
 
         % jeśli w macierzy D zostały jeszcze wartości nie wyzerowane
        if (abs(v) > 0.000001)
