@@ -34,7 +34,7 @@ end
 field_sin3 = dt_sin * field_sin3,
 err2 = abs(q2 - field_sin3),
 
-
+%wagi i węzły dla dwupunktowej
 wages2 = [1,1];
 nodes2 = [-1/sqrt(3), 1/sqrt(3)];
 
