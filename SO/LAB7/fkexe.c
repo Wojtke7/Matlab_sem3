@@ -22,7 +22,7 @@ int main(){
     printf("Process PID: %d Finished, Code Finished: %d, Numer sygnału: %d \n",pid1,WEXITSTATUS(status1),WTERMSIG(status1));
     
     waitpid(pid2,&status2,0);
-    printf("Process PID: %d Finished, Code Finished: %d, Numer sygnału: %d \n",pid2,WEXITSTATUS(status1),WTERMSIG(status1));
+    printf("Process PID: %d Finished, Code Finished: %d, Numer sygnału: %d \n",pid2,WEXITSTATUS(status2),WTERMSIG(status2));
 
     return 0;
 

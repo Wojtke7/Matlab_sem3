@@ -12,9 +12,9 @@ int main(){
     signal(SIGINT,signal_handler);
     signal(SIGTERM,signal_handler);
 
-    printf("Process nowy1: Started \n");
+    printf("Process nowy1: Begin \n");
     sleep(20);
-    printf("Process nowy1: finished \n");
+    printf("Process nowy1: Finish \n");
 
     return 0;
 }
