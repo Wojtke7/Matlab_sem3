@@ -4,7 +4,6 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
 //        SatBeams satBeams = new SatBeams("https://satbeams.com/satellites?status=active");
 //
 //        //satBeams.SortByPosition();
@@ -27,7 +26,7 @@ public class Main {
 //            System.out.println(satelitesBeams.get(i));
 //        }
 
-        Lyngsat lyngsat = new Lyngsat("https://www.lyngsat.com/europe.html?fbclid=IwAR35ng507OIeXn7Pz7pHFvTqw5_9rlnaoDGTCGFlWiyxWNBKOlk5GaQxlRg");
+        Lyngsat lyngsat = new Lyngsat("https://www.lyngsat.com/europe.html");
         lyngsat.DownloadPage();
+        }
     }
-}
