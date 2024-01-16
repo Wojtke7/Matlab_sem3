@@ -20,7 +20,7 @@ public class SatBeams extends WebPage {
     @Override
     public void DownloadPage() {
 
-        int[] id = new int[500];
+        int[] id = new int[465];
         try{
             Document doc = Jsoup.connect(url).get();
             Elements table = doc.selectXpath("//*[@id=\"sat_grid\"]");   //#sat_grid.sat_grid

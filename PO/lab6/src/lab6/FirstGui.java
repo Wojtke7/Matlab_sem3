@@ -1,4 +1,4 @@
-package lab6;
+package lab6.src.lab6;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
