@@ -9,11 +9,11 @@ int main(){
     int i;
     int j;
     int vs;
-    int semid = Tworz(2);
+    int semid = Tworz(2); //utworzenie dwóch semaforów
     struct sembuf	op_wait_down[2] = { 0,  0, 0,
 				    0,  1, 0 };		/*czekaj az ktos podniesie semafor (otworzy) a potem opusc */
-    struct sembuf	op_wait_down_2[2] = { 1,  0, 0,
-				    1,  1, 0 };
+    struct sembuf	op_wait_down_2[2] = { 1,  0, 0, // Operacja na semaforze o indeksie 1: Czekaj (wait/down) aż semafor będzie równy 0
+				    1,  1, 0 }; // Operacja na semaforze o indeksie 1: Zwiększ (up) semafor o 1
     bool second_program = false;
     if (semop(semid, op_wait_down_2, 2) < 0)	{
         perror("semop down error");
