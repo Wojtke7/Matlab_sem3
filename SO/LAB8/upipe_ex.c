@@ -14,7 +14,7 @@ int main() {
         // Podłączanie końca zapisu potoku do stdout
         dup2(pipefd[1], 1);
 
-        execlp("cat", "cat", "/etc/passwd", NULL);
+        execlp("cat", "cat", "/etc/passwd", NULL); //wykonanie polecenia cat etc/passwd w procesie potomnym
 
     } else {  // Proces rodzicielski
         pid_t sort_pid = fork();

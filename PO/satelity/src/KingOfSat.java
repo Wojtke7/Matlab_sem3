@@ -1,9 +1,7 @@
 //package SatTask;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;

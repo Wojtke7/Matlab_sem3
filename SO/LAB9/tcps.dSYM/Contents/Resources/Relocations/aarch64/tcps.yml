@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/wojtke/Desktop/Studia_sem3/SO/LAB9/tcps'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _ShowTCPAdd, symObjAddr: 0x0, symBinAddr: 0x100003904, symSize: 0x68 }
+  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _ShowTCPAdd, symObjAddr: 0x0, symBinAddr: 0x100003904, symSize: 0x68 }
+  - { offsetInCU: 0x58, offset: 0x58, size: 0x8, addend: 0x0, symName: _ShowTCPAdd.tcpadd, symObjAddr: 0x169D, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xD6, offset: 0xD6, size: 0x8, addend: 0x0, symName: _processConnection, symObjAddr: 0x68, symBinAddr: 0x10000396C, symSize: 0xE4 }
+  - { offsetInCU: 0x152, offset: 0x152, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x14C, symBinAddr: 0x100003A50, symSize: 0x2EC }
+  - { offsetInCU: 0x206, offset: 0x206, size: 0x8, addend: 0x0, symName: __OSSwapInt16, symObjAddr: 0x438, symBinAddr: 0x100003D3C, symSize: 0x24 }
+...

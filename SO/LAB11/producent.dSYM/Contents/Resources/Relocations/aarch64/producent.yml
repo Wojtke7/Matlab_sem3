@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/wojtke/Desktop/Studia_sem3/SO/LAB11/producent'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _P, symObjAddr: 0x0, symBinAddr: 0x100003938, symSize: 0x68 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _arg, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x204, offset: 0x204, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2AC, symBinAddr: 0x100003BE4, symSize: 0x1E8 }
+  - { offsetInCU: 0x2D7, offset: 0x2D7, size: 0x8, addend: 0x0, symName: _P, symObjAddr: 0x0, symBinAddr: 0x100003938, symSize: 0x68 }
+  - { offsetInCU: 0x317, offset: 0x317, size: 0x8, addend: 0x0, symName: _V, symObjAddr: 0x68, symBinAddr: 0x1000039A0, symSize: 0x68 }
+  - { offsetInCU: 0x357, offset: 0x357, size: 0x8, addend: 0x0, symName: _Tworz, symObjAddr: 0xD0, symBinAddr: 0x100003A08, symSize: 0x184 }
+  - { offsetInCU: 0x3A9, offset: 0x3A9, size: 0x8, addend: 0x0, symName: _Usun, symObjAddr: 0x254, symBinAddr: 0x100003B8C, symSize: 0x58 }
+...

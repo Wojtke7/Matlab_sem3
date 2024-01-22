@@ -30,7 +30,7 @@ void processConnection( int sock )
 
 
    char *http_interpret = "HTTP/1.0 200 OK\nContent-Type: text/html\n\n";
-   int file_fd = open("site.html", O_RDONLY);
+   int file_fd = open("site.html", O_RDONLY); //otwarcie pliku html 
    ssize_t bytes_read;
 
 
@@ -39,8 +39,8 @@ void processConnection( int sock )
 
 
    // kod html
-   bytes_read = read(file_fd, buffer, 1024);
-   ssize_t bytes_sent2 = send(sock, buffer, bytes_read, 0);
+   bytes_read = read(file_fd, buffer, 1024); //przeczytanie z pliku 
+   ssize_t bytes_sent2 = send(sock, buffer, bytes_read, 0); //interpretacja pliku
    close(file_fd);
 
    // do {
@@ -68,7 +68,7 @@ int main( int argc, char * argv [] )
 
 //Domyslnie serwer slucha na porcie 13333 i kazdym interfejsie sieciowym
 
-   int Server_Port = 8080;
+   int Server_Port = 8080; // nasz serwer słucha na porcie 8080
 
    int koniec = 0;
    struct sockaddr_in srvadd;
